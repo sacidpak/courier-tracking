@@ -1,0 +1,28 @@
+spring:
+ application:
+  name: courier-tracking
+ jpa:
+  database-platform: org.hibernate.dialect.H2Dialect
+  hibernate:
+   ddl-auto: create
+  properties:
+    hibernate:
+     validator:
+      apply_to_ddl: true
+     check_nullability: true
+ h2:
+  console.enabled: true
+ datasource:
+  url: jdbc:h2:~/test
+  username: sa
+  password: sa
+  driverClassName: org.h2.Driver
+
+
+
+springdoc:
+ swagger-ui:
+  path: /swagger-ui.html
+
+distance:
+ strategy: OFFLINE
